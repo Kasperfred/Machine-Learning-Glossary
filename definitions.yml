@@ -7,7 +7,8 @@
 #     url: "..."
 #   link: "..." (optional)
 machine learning:
-  definition: "A class of algorithms that learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
+  definition: "A class of algorithms that learn from experience E with respect to some class of tasks T \
+  and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
   synonyms: [ML, Machine Intelligence]
   source:
     name: Tom M. Mitchell
@@ -16,9 +17,6 @@ machine learning:
 artificial intelligence:
   definition: "Systems that exhibit intelligent behaviour."
   synonyms: [AI]
-mean squared error:
-  definition: "The average squared loss per example. MSE is calculated by dividing the squared loss by \
-  the number of examples. The values that TensorFlow Playground displays for Training loss and Test loss are MSE."
 supervised learning:
   definition: "Learning from labeled data. This is the most common learning method."
 unsupervised learning:
@@ -28,7 +26,9 @@ reinforcement learning:
   synonyms: [RL]
 neural network:
   definition: "A type of machine learning algorithm inspired by the human brain. \
-  They are designed around layers of neurons doing simple operations."
+  They are designed around layers of neurons doing simple operations. Fitting a neural \
+  network is a matter of finding a set of weights of the connections between the neurons \
+  that result in a low error function."
   synonyms: [NN, ANN, Artificial Neural Network]
   link: https://kasperfred.com/tag/neural-networks
 deep learning:
@@ -37,3 +37,23 @@ deep learning:
   link: https://kasperfred.com/tag/deep-learning
 hidden layer: 
   definition: "A layer in a neural network that is neither the input layer, or the output layer."
+loss function:
+  definition: "The criteria on which a supervised model is evaluated. The goal is to minimize this."
+  synonyms: [Error function]
+gradient descent:
+  definition: "The primary algorithm used to train neural networks.\
+  It works by iteratively taking small steps towards a lower error value \
+  using the gradient of the error function with respect to individual weights."
+back propagation:
+  definition: "The algorithm used to find the gradient of the loss function with respect \
+  to the individual weights. It works by repeatedly applying the chain rule."
+chain rule:
+  definition: "A mathematical theorem that lets you find the gradient of composite functions. \
+  It is defined as:<br>
+  /$f(g(x))' = f'(g) \\cdot g'(x)/$"
+gradient:
+  definition: "The derivatives of all the inputs to a multivariate function."
+derivative:
+  definition: "The slope of a line at a given point."
+stochastic gradient descent:
+  definition: "The same as gradient descent, but "
