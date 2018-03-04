@@ -1,0 +1,39 @@
+# Definition schema
+# [concept name]:
+#   definition: "..."
+#   synonyms: ["...", "..."] (optional)
+#   source: (optional)
+#     name: "..."
+#     url: "..."
+#   link: "..." (optional)
+machine learning:
+  definition: "A class of algorithms that learn from experience E with respect to some class of tasks T and performance measure P if its performance at tasks in T, as measured by P, improves with experience E."
+  synonyms: [ML, Machine Intelligence]
+  source:
+    name: Tom M. Mitchell
+    url: https://www.saylor.org/site/wp-content/uploads/2012/06/Wikipedia-Machine-Learning.pdf
+  link: https://kasperfred.com/tag/machine-learning
+artificial intelligence:
+  definition: "Systems that exhibit intelligent behaviour."
+  synonyms: [AI]
+mean squared error:
+  definition: "The average squared loss per example. MSE is calculated by dividing the squared loss by \
+  the number of examples. The values that TensorFlow Playground displays for Training loss and Test loss are MSE."
+supervised learning:
+  definition: "Learning from labeled data. This is the most common learning method."
+unsupervised learning:
+  definition: "Learning from unlabeled data."
+reinforcement learning:
+  definition: "Learning through reinforcement; punishment and reward. Inspired by behavioural psychology."
+  synonyms: [RL]
+neural network:
+  definition: "A type of machine learning algorithm inspired by the human brain. \
+  They are designed around layers of neurons doing simple operations."
+  synonyms: [NN, ANN, Artificial Neural Network]
+  link: https://kasperfred.com/tag/neural-networks
+deep learning:
+  definition: "Neural networks with more than 1 hidden layers."
+  synonyms: [DL]
+  link: https://kasperfred.com/tag/deep-learning
+hidden layer: 
+  definition: "A layer in a neural network that is neither the input layer, or the output layer."

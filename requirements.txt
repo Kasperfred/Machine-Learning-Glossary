@@ -1,0 +1,3 @@
+PyYAML==3.12
+Jinja2==2.9.6
+htmlmin==0.1.12

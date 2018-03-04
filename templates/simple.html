@@ -1,0 +1,23 @@
+{% for category in content %}
+    {% if content[category] %}
+        <h2 id="{{category}}" class="linkable">{{category}}<span class="anchor"> <a href="#{{category}}">#</a></span></h2><underline></underline>
+        {% for term in content[category] %}
+            <h3 id="{{term.name}}" class="linkable">{{term.name|title}}{% if term.synonyms %} ({{term.synonyms[0]}}){%endif%}<span class="anchor"> <a href="#{{term.name}}">#</a></span></h3>
+            <p>{{term.definition}}</p>
+            {% if term.link %}<p> Read more about <a href="{{term.link}}">{{term.name}}</a>.</p>{%endif%}
+            {% if term.synonyms %}<p class="sub"><sub>Synonyms: {% for synonym in term.synonyms%}<span>{{synonym}}</span>{{ ", " if not loop.last }}{%endfor%}</sub></p>{%endif%}
+            {% if term.source %}<p class="sub"><sub>Source: <a href="#{{term.source.name}}">{{term.source.name}}</a></sub></p>{%endif%}
+            <br>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+
+{% if sources %}
+    <hr><h3 id="sources" >Sources</h3><underline></underline>
+    <ul>
+        {% for source in sources %}
+            <li><a id="{{source.name}}" href="{{source.url}}">{{source.name}}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<style>underline{content: "";display: block;bottom: 0;border-bottom: 1px solid rgba(0,0,0,.05);width: 100%;margin: 0 auto;}.anchor{opacity: 0;} .anchor>a{text-decoration:none;}.linkable:hover .anchor{opacity: .999;}.sub{margin:0.1em;margin-left:0;margin-right:0;}</style>
