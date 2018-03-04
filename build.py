@@ -45,6 +45,3 @@ if __name__ == "__main__":
     sources = get_sources(definitions)
     html = render_template(categorized_definitions, sources)
     export_html(html)
-    
-
-    
