@@ -1,6 +1,6 @@
 # Machine Learning Glossary
 
-A collection of useful definitions of commonly used machine learning terms.
+A collection of commonly used machine learning terms, and their meaning. 
 The definitions are in yaml format and are found in the `definitions.yml` file.
 
 The definitions follow the schema:
