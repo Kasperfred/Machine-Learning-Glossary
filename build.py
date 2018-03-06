@@ -4,6 +4,11 @@ import string
 import htmlmin
 import distutils.dir_util
 
+class HashableDict(dict):
+    def __hash__(self):
+        return hash(frozenset(self))
+
+
 def import_definitions(path='definitions.yml'):
     with open(path, "r") as f:
         content = f.read()
@@ -17,15 +22,15 @@ def sort_and_categorize_definitions(definitions):
     return categorized_terms
 
 def get_sources(definitions):
-    sources = []
+    sources = set()
     for i in definitions:
         try: 
-            sources.append(definitions[i]['source'])
+            sources.add(HashableDict(definitions[i]['source']))
         except: 
             pass
-    return sources
+    return sorted(list(sources), key=lambda x: x["name"])
 
-def render_template(categorized_definitions, sources=None, template="templates/default.html"):
+def render_template(categorized_definitions, sources=None, template="templates/simple.html"):
     with open(template, 'r') as f:
         template = Template(f.read())
     
@@ -45,3 +50,4 @@ if __name__ == "__main__":
     sources = get_sources(definitions)
     html = render_template(categorized_definitions, sources)
     export_html(html)
+    
