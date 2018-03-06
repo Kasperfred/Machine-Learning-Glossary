@@ -49,11 +49,79 @@ back propagation:
   to the individual weights. It works by repeatedly applying the chain rule."
 chain rule:
   definition: "A mathematical theorem that lets you find the gradient of composite functions. \
-  It is defined as:<br>
+  It is defined as:<br><br>
   /$f(g(x))' = f'(g) \\cdot g'(x)/$"
 gradient:
-  definition: "The derivatives of all the inputs to a multivariate function."
+  definition: "A vector of the derivatives of all the inputs to a multivariate function.
+  The gradient of a function at a given point will point towards the direction of steepest ascent."
 derivative:
   definition: "The slope of a line at a given point."
 stochastic gradient descent:
-  definition: "The same as gradient descent, but "
+  definition: "The same as gradient descent, but where you update the weights before having gone \ 
+  through all the training data. This is a very common technique."
+positive prediction:
+  definition: "Predicting that an event has occured."
+negative prediction:
+  definition: "Predicting that an event has not occured."
+false positive prediction:
+  definition: "Falsely believing that an event has occured."
+true positive prediction:
+  definition: "Correctly believing that an event has occured."
+false negative prediction:
+  definition: "Falsely believing that an event has not occured."
+true negative prediction:
+  definition: "Correctly believing that an event has not occured."
+bias:
+  definition: "Statistical bias is the systematical difference in a models hypothesis and \
+  and the true distribution. In neural networks, bias can also refer to the bias unit \
+  which always takes the value of 1, and functions as threshold for a neuron's activation.<br>
+  In machine learning, having a high bias is a sign of underfitting."
+variance:
+  definition: "Statistical variance is a measure of how spread-out a dataset is. \ 
+  It's formally defined as /$\\sigma^2/$.<br>
+  In machine learning, having a high variance is a sign of overfitting."
+standard deviation:
+  definition: "A measure that is used to quantify the amount of variation \
+  or dispersion of a set of data values."
+  synonyms: ["/$\\sigma/$"]
+  source:
+    name: "Bland J.M. Altman"
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2351401/
+precision:
+  definition: "How many of the positive predictions were correct?"
+  source:
+    name: "David M W Powers"
+    url: http://www.flinders.edu.au/science_engineering/fms/School-CSEM/publications/tech_reps-research_artfcts/TRRA_2007.pdf
+recall:
+  definition: "How many of the positive events were correctly predicted?"
+  source:
+    name: "David M W Powers"
+    url: http://www.flinders.edu.au/science_engineering/fms/School-CSEM/publications/tech_reps-research_artfcts/TRRA_2007.pdf
+f1 score:
+  definition: "A single measurement that combines precision and recall.
+  It is defined as:<br><br>
+  /$F_1 = 2 \\cdot \\frac{1}{\\frac{1}{\\text{precision}}+\\frac{1}{\\text{recall}}}/$
+  "
+  source:
+    name: "David M W Powers"
+    url: http://www.flinders.edu.au/science_engineering/fms/School-CSEM/publications/tech_reps-research_artfcts/TRRA_2007.pdf
+overfitting:
+  definition: "When a model fits a data distribution too closely,
+  and thus fails to generalize to new data.<br>
+  Overfitting is measureable as having a high variance, 
+  and a large difference in accuracy between the training and test set."
+underfitting:
+  definition: "When a model fits a data distribution too loosely,
+  and thus fails to capture patterns in the data.<br>
+  Underfitting is measureable as having a high bias."
+feature engineering:
+  definition: "Computing new features from existing features in a dataset."
+binomial distribution:
+  definition: "A common distribution of probabilities that follows a bell shaped curve.
+  The disribution is often found in nature."
+  synonyms: ["Normal Distribution", "Gaussian Distribution", " Laplace-Gauss Distribution"]
+convolutional neural network:
+  definition: "A type of neural network modelled after the visual cortex.
+  It has been found especially powerful in image recognition tasks, 
+  but also natural language problems."
+  synonyms: ["CNN"]
