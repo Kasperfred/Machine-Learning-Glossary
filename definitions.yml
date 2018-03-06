@@ -108,12 +108,12 @@ f1 score:
 overfitting:
   definition: "When a model fits a data distribution too closely,
   and thus fails to generalize to new data.<br>
-  Overfitting is measureable as having a high variance, 
+  Overfitting is measurable as having a high variance, 
   and a large difference in accuracy between the training and test set."
 underfitting:
   definition: "When a model fits a data distribution too loosely,
   and thus fails to capture patterns in the data.<br>
-  Underfitting is measureable as having a high bias."
+  Underfitting is measurable as having a high bias."
 feature engineering:
   definition: "Computing new features from existing features in a dataset."
 binomial distribution:
@@ -125,3 +125,9 @@ convolutional neural network:
   It has been found especially powerful in image recognition tasks, 
   but also natural language problems."
   synonyms: ["CNN"]
+classification:
+  definition: "Predicting descrete values such as of which group an object is a member.
+  An example might be predicting which species an animal belongs to."
+regression:
+  definition: "Predicting continous values such as where on a spectrum an object falls.
+  An example might be predicting the price of a house."
