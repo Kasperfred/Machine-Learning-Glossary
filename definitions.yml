@@ -131,3 +131,9 @@ classification:
 regression:
   definition: "Predicting continous values such as where on a spectrum an object falls.
   An example might be predicting the price of a house."
+recursion:
+  definition: "A function that calls itself."
+hadamard product:
+  definition: "Elementwise multiplication defined for two matrices of the same dimensions. <br>
+  The resulting matrix is found by multiplying each value in one matrix
+  by the value at the same index in the other matrx."
