@@ -136,12 +136,13 @@ recursion:
 hadamard product:
   definition: "Elementwise multiplication defined for two matrices of the same dimensions. <br>
   The resulting matrix is found by multiplying each value in one matrix
-  by the value at the same index in the other matrx."<br><br>
+  by the value at the same index in the other matrx.<br><br>
   /$$ 
-  A\odot B = \begin{bmatrix}
-   a_{(1,1)} \cdot b_{1,2} & \cdots  & a_{(1,c)} \cdot b_{1,c} \\
-   \vdots    & \ddots & \vdots \\
-   a_{(r,1)} \cdot b_{r,2} & \cdots  & a_{(r,c)} \cdot b_{r,c}
-  \end{bmatrix} 
+  A \\odot B = \\begin{bmatrix}
+   a_{(1,1)} \\cdot b_{1,2} & \\cdots  & a_{(1,c)} \\cdot b_{1,c} \\\\
+   \\vdots    & \\ddots & \\vdots \\\\
+   a_{(r,1)} \\cdot b_{r,2} & \\cdots  & a_{(r,c)} \\cdot b_{r,c}
+  \\end{bmatrix} 
   /$$
-  synonyms: ["/$\odot/$","Schur product", "entrywise product"]
+  "
+  synonyms: ["/$\\odot/$","Schur product", "entrywise product"]
