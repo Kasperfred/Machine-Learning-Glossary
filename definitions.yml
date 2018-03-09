@@ -139,9 +139,9 @@ hadamard product:
   by the value at the same index in the other matrx.<br><br>
   /$$ 
   A \\odot B = \\begin{bmatrix}
-   a_{(1,1)} \\cdot b_{1,2} & \\cdots  & a_{(1,c)} \\cdot b_{1,c} \\\\
+   a_{(1,1)} \\cdot b_{(1,1)} & \\cdots  & a_{(1,c)} \\cdot b_{(1,c)} \\\\
    \\vdots    & \\ddots & \\vdots \\\\
-   a_{(r,1)} \\cdot b_{r,2} & \\cdots  & a_{(r,c)} \\cdot b_{r,c}
+   a_{(r,1)} \\cdot b_{(r,1)} & \\cdots  & a_{(r,c)} \\cdot b_{(r,c)}
   \\end{bmatrix} 
   /$$
   "
