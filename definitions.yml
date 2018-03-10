@@ -118,7 +118,7 @@ feature engineering:
   definition: "Computing new features from existing features in a dataset."
 binomial distribution:
   definition: "A common distribution of probabilities that follows a bell shaped curve.
-  The disribution is often found in nature."
+  The distribution is often found in nature."
   synonyms: ["Normal Distribution", "Gaussian Distribution", " Laplace-Gauss Distribution"]
 convolutional neural network:
   definition: "A type of neural network modelled after the visual cortex.
@@ -139,10 +139,10 @@ hadamard product:
   by the value at the same index in the other matrx.<br><br>
   /$$ 
   A \\odot B = \\begin{bmatrix}
-   a_{(1,1)} \\cdot b_{(1,1)} & \\cdots  & a_{(1,c)} \\cdot b_{(1,c)} \\\\
+   a_{(1,1)} b_{(1,1)} & \\cdots  & a_{(1,c)} b_{(1,c)} \\\\
    \\vdots    & \\ddots & \\vdots \\\\
-   a_{(r,1)} \\cdot b_{(r,1)} & \\cdots  & a_{(r,c)} \\cdot b_{(r,c)}
+   a_{(r,1)} b_{(r,1)} & \\cdots  & a_{(r,c)} b_{(r,c)}
   \\end{bmatrix} 
   /$$
   "
-  synonyms: ["/$\\odot/$","Schur product", "entrywise product"]
+  synonyms: ["/$\\odot/$","Schur product", "Entrywise product"]
