@@ -1,17 +1,22 @@
-{% for category in content %}
-    {% if content[category] %}
-        <h2 id="{{category.replace(" ", "+")}}" class="linkable">{{category}}<span class="anchor"> <a href="#{{category.replace(" ", "+")}}">#</a></span></h2><underline></underline>
-        {% for term in content[category] %}
-            <h3 id="{{term.name.replace(" ", "+")}}" class="linkable">{{term.name|title}}{% if term.synonyms %} ({{term.synonyms[0]}}){%endif%}<span class="anchor"> <a href="#{{term.name.replace(" ", "+")}}">#</a></span></h3>
-            <p>{{term.definition}}</p>
-            {% if term.link %}<p> Read more about <a href="{{term.link}}">{{term.name}}</a>.</p>{%endif%}
-            {% if term.synonyms %}<p class="sub"><sub>Synonyms: {% for synonym in term.synonyms%}<span>{{synonym}}</span>{{ ", " if not loop.last }}{%endfor%}</sub></p>{%endif%}
-            {% if term.source %}<p class="sub"><sub>Source: <a href="#{{term.source.name.replace(" ", "+")}}">{{term.source.name}}</a></sub></p>{%endif%}
-            <br>
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
+<div class="hidden-sm" style="width:50vw;"></div><div id="categories">
+    {% for category in content %}
+        {% if content[category] %}
+            <div id="{{category}}-wrapper">
+                <h2 id="{{category}}" class="linkable">{{category}}<span class="anchor"> <a href="#{{category.replace(" ", "+")}}">#</a></span></h2><underline></underline>
+                {% for term in content[category] %}
+                    <div id="{{term.name.replace(" ", "-")}}-wrapper">
+                        <h3 id="{{term.name.replace(" ", "+")}}" class="linkable">{{term.name|title}}{% if term.synonyms %} ({{term.synonyms[0]}}){%endif%}<span class="anchor"> <a href="#{{term.name.replace(" ", "+")}}">#</a></span></h3>
+                        <p>{{term.definition}}</p>
+                        {% if term.link %}<p> Read more about <a href="{{term.link}}">{{term.name}}</a>.</p>{%endif%}
+                        {% if term.synonyms %}<p class="sub"><sub>Synonyms: {% for synonym in term.synonyms%}<span>{{synonym}}</span>{{ ", " if not loop.last }}{%endfor%}</sub></p>{%endif%}
+                        {% if term.source %}<p class="sub"><sub>Source: <a href="#{{term.source.name.replace(" ", "+")}}">{{term.source.name}}</a></sub></p>{%endif%}
+                        <br>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %} 
+    {% endfor %}
+</div>
 {% if sources %}
     <hr><h3 id="sources" >Sources</h3><underline></underline>
     <ul>
@@ -20,4 +25,50 @@
         {% endfor %}
     </ul>
 {% endif %}
+<script>
+    (function() {
+        headerHTML = '<div class="jumbotron"><div class="form"><form><input id="search-input" type="text" class="field" onkeyup="searchFunction()" placeholder="Search" value=""></form></div></div>'
+        el = document.getElementsByClassName("article-header")[0]
+        el.innerHTML = headerHTML
+    })();
+    function searchFunction() {
+        filter = document.getElementById("search-input").value.toUpperCase()
+        firstLetter = filter.charAt(0).toUpperCase()
+
+        document.getElementsByClassName("content")[0].style.display = "100%"
+
+        if (filter == ""){
+            document.getElementsByClassName("title")[0].style.display = ""
+            document.getElementsByClassName("description")[0].style.display = ""
+        } else {
+            document.getElementsByClassName("title")[0].style.display = "none"
+            document.getElementsByClassName("description")[0].style.display = "none"
+        }
+
+        categories = document.getElementById("categories").children
+        for (i = 0; i < categories.length; i++) {
+            node = categories[i]
+            if (node.id == `${firstLetter}-wrapper` || filter == ""){
+                node.style.display = ""
+
+                terms = node.children
+                for (j=0; j < terms.length; j++){
+                    term = terms[j]
+
+                    if (term.tagName == "DIV"){
+                        if (term.id.replace("-", " ").toUpperCase().search(filter) != -1 || filter == ""){
+                            term.style.display = ""
+                        } else {
+                            term.style.display = "none"
+                        }
+                    }
+
+                }
+            } else {
+                node.style.display = "none"
+            }
+        }
+
+    }
+</script>
 <style>underline{content: "";display: block;bottom: 0;border-bottom: 1px solid rgba(0,0,0,.05);width: 100%;margin: 0 auto;}.anchor{opacity: 0;} .anchor>a{text-decoration:none;}.linkable:hover .anchor{opacity: .999;}.sub{margin:0.1em;margin-left:0;margin-right:0;}</style>
