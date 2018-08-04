@@ -25,10 +25,10 @@ reinforcement learning:
   definition: "Learning through reinforcement; punishment and reward. Inspired by behavioural psychology."
   synonyms: [RL]
 neural network:
-  definition: "A type of machine learning algorithm inspired by the human brain. \
-  They are designed around layers of neurons doing simple operations. Fitting a neural \
+  definition: "A type of machine learning algorithm broadly inspired by the biological brain. \
+  Neural networks are designed around layers of neurons doing simple operations. Fitting a neural \
   network is a matter of finding a set of weights of the connections between the neurons \
-  that result in a low error function."
+  that result in a low error."
   synonyms: [NN, ANN, Artificial Neural Network]
   link: https://kasperfred.com/tag/neural-networks
 deep learning:
@@ -59,6 +59,7 @@ derivative:
 stochastic gradient descent:
   definition: "The same as gradient descent, but where you update the weights before having gone \ 
   through all the training data. This is a very common technique."
+  synonyms: [SGD]
 positive prediction:
   definition: "Predicting that an event has occured."
 negative prediction:
@@ -146,3 +147,5 @@ hadamard product:
   /$$
   "
   synonyms: ["/$\\odot/$","Schur product", "Entrywise product"]
+feature space:
+  definition: "The /$n/$-dimensions where the variables, or features, of a model live."
